@@ -1,0 +1,736 @@
+{
+	"info": {
+		"_postman_id": "38a94ea8-59bd-46d5-a638-b50a25cc6831",
+		"name": "Practical-task-14-12",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39658735"
+	},
+	"item": [
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "Add Todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc1ZDI1YzI4OGJmMDAxZDliYWYxZjkzIiwiaWF0IjoxNzM0MTU3ODg4fQ.7chEK-AHPFdCQEByrB5nEuAFgxFJNKf7ANkCYU_hJcM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Third Task\",\r\n    \"description\":\"for the testing\",\r\n    \"startDate\":\"2024-12-15\",\r\n    \"endDate\":\"2024-12-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/todo/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"todo",
+								"add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Todo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Third Task\",\r\n    \"description\":\"for the testing\",\r\n    \"startDate\":\"2024-12-15\",\r\n    \"endDate\":\"2024-12-15\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/todo/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"todo",
+										"add"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "64"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"40-5KkbOsFKt5xMiT/Amv5wHilO/FU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 14 Dec 2024 09:33:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"message\": \"Todo added successfully\",\n    \"response\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Todo List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc1ZDI1YzI4OGJmMDAxZDliYWYxZjkzIiwiaWF0IjoxNzM0MTU3ODg4fQ.7chEK-AHPFdCQEByrB5nEuAFgxFJNKf7ANkCYU_hJcM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/todo/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"todo",
+								"get"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Todo List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/todo/get",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"todo",
+										"get"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1026"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"402-c4HHano6/NdKn4Q+vHWld6SxNfU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 14 Dec 2024 09:33:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Fetched successfully\",\n    \"response\": [\n        {\n            \"_id\": \"14-12-2024\",\n            \"count\": 2,\n            \"todos\": [\n                {\n                    \"_id\": \"675d2f13e3300ca5351a6af0\",\n                    \"title\": \"New task\",\n                    \"description\": \"update testing\",\n                    \"startDate\": \"2024-12-14T00:00:00.000Z\",\n                    \"endDate\": \"2024-12-20T00:00:00.000Z\",\n                    \"status\": \"completed\",\n                    \"remainder\": true,\n                    \"addedBy\": \"675d25c288bf001d9baf1f93\",\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2024-12-14T07:09:07.290Z\"\n                },\n                {\n                    \"_id\": \"675d31e482b630de4f3f5860\",\n                    \"title\": \"Second Task\",\n                    \"description\": \"for the testing\",\n                    \"startDate\": \"2024-12-14T00:00:00.000Z\",\n                    \"endDate\": \"2024-12-14T00:00:00.000Z\",\n                    \"status\": \"pending\",\n                    \"remainder\": true,\n                    \"addedBy\": \"675d25c288bf001d9baf1f93\",\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2024-12-14T07:21:08.556Z\"\n                }\n            ]\n        },\n        {\n            \"_id\": \"15-12-2024\",\n            \"count\": 1,\n            \"todos\": [\n                {\n                    \"_id\": \"675d31f282b630de4f3f5863\",\n                    \"title\": \"Updated task\",\n                    \"description\": \"for the testing\",\n                    \"startDate\": \"2024-12-15T00:00:00.000Z\",\n                    \"endDate\": \"2024-12-15T00:00:00.000Z\",\n                    \"status\": \"pending\",\n                    \"remainder\": true,\n                    \"addedBy\": \"675d25c288bf001d9baf1f93\",\n                    \"isDeleted\": false,\n                    \"createdAt\": \"2024-12-14T07:21:22.828Z\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc1ZDI1YzI4OGJmMDAxZDliYWYxZjkzIiwiaWF0IjoxNzM0MTU3ODg4fQ.7chEK-AHPFdCQEByrB5nEuAFgxFJNKf7ANkCYU_hJcM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"todoId\":\"675d2f13e3300ca5351a6af0\",\r\n    \"title\":\"New task\",\r\n    \"description\":\"update testing\",\r\n    \"endDate\":\"2024-12-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/todo/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"todo",
+								"edit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Todo",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"todoId\":\"675d2f13e3300ca5351a6af0\",\r\n    \"title\":\"New task\",\r\n    \"description\":\"update testing\",\r\n    \"endDate\":\"2024-12-20\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/todo/edit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"todo",
+										"edit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c-gN+FB9rkgYywSsxT6vFeqozqcxc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 14 Dec 2024 09:34:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Update successfully\",\n    \"response\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc1ZDI1YzI4OGJmMDAxZDliYWYxZjkzIiwiaWF0IjoxNzM0MTU3ODg4fQ.7chEK-AHPFdCQEByrB5nEuAFgxFJNKf7ANkCYU_hJcM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/todo/today",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"todo",
+								"today"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Todo",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/todo/today",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"todo",
+										"today"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d-ZJhqlNMCWVW8uuU7lXr3VH/x6aQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 14 Dec 2024 09:34:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Deleted successfully\",\n    \"response\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Change Todo status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc1ZDI1YzI4OGJmMDAxZDliYWYxZjkzIiwiaWF0IjoxNzM0MTU3ODg4fQ.7chEK-AHPFdCQEByrB5nEuAFgxFJNKf7ANkCYU_hJcM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"todoId\":\"675d31f282b630de4f3f5863\",\r\n    \"status\":\"completed\" // pending, completed\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/todo/change-status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"todo",
+								"change-status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Change Tod status",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"todoId\":\"675d31f282b630de4f3f5863\",\r\n    \"status\":\"completed\" // pending, completed\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/todo/change-status",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"todo",
+										"change-status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c-gN+FB9rkgYywSsxT6vFeqozqcxc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 14 Dec 2024 09:35:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Update successfully\",\n    \"response\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"test\",\r\n    \"email\":\"test@yopmail.com\",\r\n    \"password\":\"User@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/api/v1/auth/signup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"tes2t\",\r\n    \"email\":\"test12@yopmail.com\",\r\n    \"password\":\"User@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "64"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"40-tPDARAEwqL6VI/nBvoZoEelVcT4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 14 Dec 2024 09:36:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 201,\n    \"message\": \"Registered successfully\",\n    \"response\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test@yopmail.com\",\r\n    \"password\":\"User@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@yopmail.com\",\r\n    \"password\":\"User@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "216"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d8-mklKtynmLI81GOndp59xEiTg3HA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 14 Dec 2024 09:36:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Fetched successfully\",\n    \"response\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc1ZDI1YzI4OGJmMDAxZDliYWYxZjkzIiwiaWF0IjoxNzM0MTY4OTc5fQ.MujxRCTkufSccoV-eRYCnzTRR3U_hpyt9wQ3g5EGt1E\"\n}"
+				}
+			]
+		}
+	]
+}
