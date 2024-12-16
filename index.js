@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 
 app.use(errorMiddleware);
 
-const server = app.listen(port, () => {
+app.listen(port, () => {
     try {
         console.log(`Server is listing on the ${port}`)
     } catch (error) {
