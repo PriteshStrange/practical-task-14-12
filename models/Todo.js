@@ -25,7 +25,7 @@ const todoSchema = mongoose.Schema({
     },
     reminderTime: { 
         type: Date, 
-        required: true 
+        // required: true 
     },
     remainder: {
         type: Boolean,
